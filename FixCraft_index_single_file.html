@@ -166,6 +166,78 @@
           <input id="city" placeholder="City / ZIP code">
           <textarea id="details" required placeholder="Describe your project"></textarea>
           <button class="btn primary full" type="submit">SEND QUOTE REQUEST</button>
+          <form
+  method="POST"
+  action="https://formspree.io/f/xwlevoeb"
+  enctype="multipart/form-data"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  >
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    required
+  >
+
+  <select name="service" required>
+    <option value="">Select a Service</option>
+    <option>Furniture Assembly</option>
+    <option>Gym Equipment Assembly</option>
+    <option>TV Mounting</option>
+    <option>Door Repair</option>
+    <option>Screen Door Repair</option>
+    <option>Shelving & Wall Mounting</option>
+    <option>Minor Home Repair</option>
+    <option>General Handyman</option>
+  </select>
+
+  <input
+    type="text"
+    name="city_zip"
+    placeholder="City / ZIP Code"
+    required
+  >
+
+  <textarea
+    name="project_details"
+    placeholder="Tell us about your project"
+    required
+  ></textarea>
+
+  <label>
+    Upload Photos of Your Project
+  </label>
+
+  <input
+    type="file"
+    name="project_photos"
+    accept="image/png,image/jpeg"
+    multiple
+  >
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New FixCraft Quote Request"
+  >
+
+  <button type="submit">
+    SEND QUOTE REQUEST
+  </button>
+
         </form>
       </div>
     </section>

@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FixCraft | Bay Area Handyman</title><style>
+body{margin:0;font-family:Arial,sans-serif;color:#171717}header{background:#111;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}.logo{font-size:25px;font-weight:900}.logo span,h1 span{color:#f57c00}nav a{color:white;margin:0 10px;text-decoration:none}.hero{background:#171717;color:white;padding:80px 7%}.hero h1{font-size:50px}.btn{display:inline-block;padding:14px 20px;background:#f57c00;color:#111;text-decoration:none;font-weight:bold;border:0;border-radius:4px}.section{padding:60px 7%}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.card{padding:25px;border:1px solid #ddd;border-radius:6px}.dark{background:#111;color:white}.quote{background:#f57c00}form{max-width:700px;background:white;padding:25px;border-radius:7px;display:grid;gap:12px}input,select,textarea{padding:14px;border:1px solid #ccc;font:inherit}textarea{min-height:120px}.upload-label{font-weight:bold}.status{font-weight:bold}.contact{background:#090909;color:white;padding:35px 7%}@media(max-width:700px){nav{display:none}.hero h1{font-size:38px}}
+</style></head><body>
+<header><div class="logo">FIX<span>CRAFT</span></div><nav><a href="#services">Services</a><a href="#quote">Get a Quote</a><a href="#contact">Contact</a></nav><a class="btn" href="tel:+15103978880">510-397-8880</a></header>
+<section class="hero"><p>BAY AREA HANDYMAN SERVICES</p><h1>GET IT FIXED.<br><span>GET IT DONE RIGHT.</span></h1><p>Furniture assembly, gym equipment assembly, TV mounting, door repairs, shelving and general handyman services.</p><a class="btn" href="#quote">GET A FREE QUOTE</a></section>
+<section id="services" class="section"><h2>Our Services</h2><div class="cards">
+<div class="card">🪑<h3>Furniture Assembly</h3><p>Home and office furniture assembly.</p></div>
+<div class="card">🏋️<h3>Gym Equipment</h3><p>Home gym equipment assembly.</p></div>
+<div class="card">📺<h3>TV Mounting</h3><p>Secure TV wall mounting.</p></div>
+<div class="card">🚪<h3>Door Repairs</h3><p>Minor door, hinge and latch repairs.</p></div>
+<div class="card">🪟<h3>Screen Doors</h3><p>Minor screen door repairs and adjustments.</p></div>
+<div class="card">🧱<h3>Shelving & Mounting</h3><p>Shelves, brackets and wall storage.</p></div>
+<div class="card">🔧<h3>Minor Home Repairs</h3><p>Small household repair projects.</p></div>
+<div class="card">🛠️<h3>General Handyman</h3><p>Have another project? Ask us.</p></div>
+</div></section>
+<section class="section dark"><h2>Serving the Bay Area</h2><p>San Leandro • Hayward • Fremont • Milpitas • San Jose • Oakland • Pleasanton • Surrounding areas</p></section>
+<section id="quote" class="section quote"><h2>Request a Free Quote</h2><p>Send your project details and photos. Your request will be sent through Formspree to your FixCraft business email.</p>
+<form id="quoteForm" method="POST" action="https://formspree.io/f/xwlevoeb" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="New FixCraft Quote Request">
+<input name="name" required placeholder="Your name"><input type="email" name="email" required placeholder="Your email"><input type="tel" name="phone" required placeholder="Phone number">
+<select name="service" required><option value="">Select a service</option><option>Furniture Assembly</option><option>Gym Equipment Assembly</option><option>TV Mounting</option><option>Door Repair</option><option>Screen Door Repair</option><option>Shelving & Wall Mounting</option><option>Minor Home Repair</option><option>General Handyman</option></select>
+<input name="city_zip" placeholder="City / ZIP code"><textarea name="project_details" required placeholder="Describe your project"></textarea>
+<label class="upload-label">Upload project photos (optional)</label><input type="file" name="project_photos" accept="image/jpeg,image/png,image/webp" multiple>
+<button class="btn" type="submit">SEND QUOTE REQUEST</button><p id="status" class="status"></p></form></section>
+<section id="contact" class="contact"><h2>FIXCRAFT</h2><p>Handyman services you can count on.</p><p>📞 <a style="color:white" href="tel:+15103978880">510-397-8880</a></p><p>📸 <a style="color:white" href="https://www.instagram.com/fixc_raft/" target="_blank">@fixc_raft</a></p><p>📧 fixcraftbayarea01@gmail.com</p></section>
+<script>document.getElementById('quoteForm').addEventListener('submit',async e=>{e.preventDefault();let f=e.target,s=document.getElementById('status'),b=f.querySelector('button');b.disabled=true;s.textContent='Sending...';try{let r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});if(r.ok){f.reset();s.textContent='Thank you! Your quote request was sent to FixCraft.'}else{s.textContent='Please call/text 510-397-8880.'}}catch(x){s.textContent='Please call/text 510-397-8880.'}b.disabled=false});</script></body></html>
